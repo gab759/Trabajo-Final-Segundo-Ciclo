@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyController : HerenciaEnemys
 {
-    private float generationTime = 2;
+    private float generationTime = 1.5f;
     public float timeElapsed = 0;
     private float normalSpeed;
     private float increasedSpeed; 
@@ -12,7 +12,7 @@ public class EnemyController : HerenciaEnemys
     protected override void Start()
     {
         normalSpeed = speed;
-        increasedSpeed = normalSpeed * 3.5f;
+        increasedSpeed = normalSpeed * 10;
 
     }
     protected override void VelocidadEnemy()

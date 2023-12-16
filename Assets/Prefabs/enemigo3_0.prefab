@@ -172,8 +172,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b2c9df1357e0864aa0985185bb01180, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 50
-  life: 0
+  damage: 20
+  life: 1
   points: 20
   gameManager: {fileID: 0}
   deathAnimationTrigger: IsDeath3

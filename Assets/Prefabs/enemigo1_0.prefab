@@ -173,8 +173,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 10
-  life: 0
-  points: 30
+  life: 2
+  points: 15
   gameManager: {fileID: 0}
   deathAnimationTrigger: IsDeath1
   index: 0

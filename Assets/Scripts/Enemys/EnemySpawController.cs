@@ -6,7 +6,7 @@ public class EnemySpawController : MonoBehaviour
 {
     public GameObject[] enemyPrefab;
     [HeaderAttribute("Time Spawn enemys")]
-    public float generationTime = 6;
+    public float generationTime = 3;
     private float rndX;
     private float rndY = -0.53f;
     public float timeElapsed = 0;       

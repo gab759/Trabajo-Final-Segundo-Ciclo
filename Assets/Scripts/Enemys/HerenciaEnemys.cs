@@ -6,7 +6,6 @@ public class HerenciaEnemys : MonoBehaviour
 {
     protected float speed = 0.5f;
     [SerializeField] protected int damage;
-    [SerializeField ]protected int life;
     [SerializeField]protected int points;
     protected Animator _compAnimator;
     protected Rigidbody2D _compRigidbody2D;
@@ -31,26 +30,23 @@ public class HerenciaEnemys : MonoBehaviour
     {
         if (collider.CompareTag("House"))
         {
-            //gameManager.UpdateLife(damage);
-            _compAnimator.SetTrigger(deathAnimationTrigger);
+            gameManager.UpdateLife(damage); // agregacion
+            _compAnimator.SetTrigger(deathAnimationTrigger); //agregacion
             Destroy(this.gameObject, 0.6f);
             GetComponent<BoxCollider2D>().enabled = false;
             _compRigidbody2D.constraints = RigidbodyConstraints2D.FreezePositionX;
         }
         if (collider.CompareTag("Bullet"))
         {
-            gameManager.UpdatePoints(20);
-            gameManager.UpdateCoins(10);
+            gameManager.UpdatePoints(points); //agreacion
+            gameManager.UpdateCoins(10); //agregacion
             _compAnimator.SetTrigger(deathAnimationTrigger);  
             Destroy(this.gameObject, 0.6f);
             GetComponent<BoxCollider2D>().enabled = false;
             _compRigidbody2D.constraints = RigidbodyConstraints2D.FreezePositionX ; 
         }
     }
- 
-    // Update is called once per frame
     protected virtual void Update()
     {
-        
     }
 }

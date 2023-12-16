@@ -10,6 +10,5 @@ public class TurretMovementController : MonoBehaviour
         Vector2 truePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         transform.position = truePosition;
         GetComponent<TurretController>().enabled = false;
-        print("me estoy moviendo");
     }
 }

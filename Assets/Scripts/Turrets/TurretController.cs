@@ -10,12 +10,6 @@ public class TurretController : MonoBehaviour
     public BulletController bulletPrefab;
     Transform positionEnenemyReference;
     Vector3 directionEnmy;
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
     void Update()
     {
         if (positionEnenemyReference != null)
@@ -46,13 +40,17 @@ public class TurretController : MonoBehaviour
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
-    {
-        //asociacion
-        if (positionEnenemyReference != null) {
-            if (collision.gameObject.GetComponent<HerenciaEnemys>().index == positionEnenemyReference.GetComponent<HerenciaEnemys>().index)
-            {   
-                this.positionEnenemyReference = null;
+    { 
+       if (positionEnenemyReference != null)
+       {
+            try
+            {
+                if (collision.gameObject.GetComponent<HerenciaEnemys>().index == positionEnenemyReference.GetComponent<HerenciaEnemys>().index)
+                {
+                    this.positionEnenemyReference = null;
+                }
             }
-        }
+            catch (System.NullReferenceException) { }
+       }
     }
 }

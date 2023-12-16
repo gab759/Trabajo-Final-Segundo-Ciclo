@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BulletController : MonoBehaviour
 {
-    [HeaderAttribute("Movement Variables in Y")]
+    [HeaderAttribute("Movement Variable")]
     public float speedY;
     private Rigidbody2D _compRigidbody2D;
     Vector3 refenciaAngle;
@@ -23,8 +23,8 @@ public class BulletController : MonoBehaviour
     {
         _compRigidbody2D.velocity = refenciaAngle * speedY;
     }
-    public void SetAngleBullet(Vector3 xd)
+    public void SetAngleBullet(Vector3 directionBullet)
     {
-        refenciaAngle = xd;
+        refenciaAngle = directionBullet;
     }
 }

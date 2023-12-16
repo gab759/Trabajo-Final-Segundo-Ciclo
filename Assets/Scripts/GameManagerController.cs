@@ -17,39 +17,34 @@ public class GameManagerController : MonoBehaviour
     private int points;
     private int coins;
     public int vidaActual;
-
     void Start()
     {
         UpdatePoints(0);
         UpdateCoins(100);
+        vidaActual = 100;
     }
     public void UpdatePoints(int score)
     {
         points = points + score;
         textPoints.text = "Puntos: " + points;
-        if (points >= 300)
+        if (points >= 700)
         {
             SceneManager.LoadScene("Winner");
         }
     }
-    /*public void UpdateLife(int vida)
+    public void UpdateLife(int vida)
     {
-        vidaActual = vidaActual - vida;
+        vidaActual -= vida;
         textLife.text = "Vida: " + vidaActual;
-        if (vida <= 0)
+        if (vidaActual <= 0)
         {
-            print("has perdido");
-            //SceneManager.LoadScene("GameOver");
+            SceneManager.LoadScene("GameOver");
         }
-    }*/
+    }
     public void UpdateCoins(int monedas)
     {
         coins = coins + monedas;
         textCoins.text = "Monedas: " + coins;
-    }
-    void Update()
-    {
-
     }
     public void GoMenu()
     {
