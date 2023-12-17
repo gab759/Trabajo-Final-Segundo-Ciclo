@@ -30,16 +30,16 @@ public class HerenciaEnemys : MonoBehaviour
     {
         if (collider.CompareTag("House"))
         {
-            gameManager.UpdateLife(damage); // agregacion
-            _compAnimator.SetTrigger(deathAnimationTrigger); //agregacion
+            gameManager.UpdateLife(damage); 
+            _compAnimator.SetTrigger(deathAnimationTrigger); 
             Destroy(this.gameObject, 0.6f);
             GetComponent<BoxCollider2D>().enabled = false;
             _compRigidbody2D.constraints = RigidbodyConstraints2D.FreezePositionX;
         }
         if (collider.CompareTag("Bullet"))
         {
-            gameManager.UpdatePoints(points); //agreacion
-            gameManager.UpdateCoins(10); //agregacion
+            gameManager.UpdatePoints(points); 
+            gameManager.UpdateCoins(10); 
             _compAnimator.SetTrigger(deathAnimationTrigger);  
             Destroy(this.gameObject, 0.6f);
             GetComponent<BoxCollider2D>().enabled = false;

@@ -1085,7 +1085,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Obten 700 Puntos
+  m_Text: Obten 800 Puntos
 --- !u!222 &811719197
 CanvasRenderer:
   m_ObjectHideFlags: 0

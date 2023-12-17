@@ -27,7 +27,7 @@ public class GameManagerController : MonoBehaviour
     {
         points = points + score;
         textPoints.text = "Puntos: " + points;
-        if (points >= 700)
+        if (points >= 800)
         {
             SceneManager.LoadScene("Winner");
         }
@@ -86,4 +86,44 @@ public class GameManagerController : MonoBehaviour
             }
         }
     }
+    /*public void CreateTurret1(int turretCost, GameObject turret1Prefab)
+    {
+        turretCost = 25;
+        if (coins >= turretCost)
+        {
+            if (currentTurret == null)
+            {
+                currentTurret = Instantiate(turret1Prefab, transform.position, transform.rotation);
+                coins -= turretCost;
+                UpdateCoins(0);
+            }
+        }
+    }
+    public void CreateTurret2(GameObject turret2Prefab, int turretCost)
+    {
+        turretCost = 50;
+        if (coins >= turretCost)
+        {
+            if (currentTurret == null)
+            {
+                currentTurret = Instantiate(turret2Prefab, transform.position, transform.rotation);
+                coins -= turretCost;
+                UpdateCoins(0);
+            }
+        }
+    }
+    public void CreateTurret3(GameObject turret2Prefab, float turretCost1)
+    {
+        int turretCost = Mathf.FloorToInt(turretCost1);
+        turretCost = 75;
+        if (coins >= turretCost)
+        {
+            if (currentTurret == null)
+            {
+                currentTurret = Instantiate(turret2Prefab, transform.position, transform.rotation);
+                coins -= turretCost;
+                UpdateCoins(0);
+            }
+        }
+    }*/
 }
